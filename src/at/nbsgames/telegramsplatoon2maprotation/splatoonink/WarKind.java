@@ -31,7 +31,10 @@ public enum WarKind {
     }
 
     public static WarKind getWarKindByName(String name){
-        if(name.equalsIgnoreCase("splatfest")){
+        if(name == null){
+            return WarKind.UNKNOWN;
+        }
+        else if(name.equalsIgnoreCase("splatfest")){
             return WarKind.SPLATFEST;
         }
         else if(name.equalsIgnoreCase("tf") || name.equalsIgnoreCase("turf") || name.equalsIgnoreCase("turf war")){
@@ -75,16 +78,9 @@ public enum WarKind {
         }
     }
 
-    public static Battle[] createScrim(ArrayList<String> mapList, BestOfFormat format){
+    public static Battle[] createScrim(ArrayList<String> mapList, int games){
 
         Random random = new Random();
-
-        int games;
-        if(format == BestOfFormat.BEST_OF_3) games = 3;
-        else if(format == BestOfFormat.BEST_OF_5) games = 5;
-        else if(format == BestOfFormat.BEST_OF_7) games = 7;
-        else if(format == BestOfFormat.BEST_OF_9) games = 9;
-        else games = 11;
 
         WarKind[] kind = new WarKind[] {null, null, null, null};
         ArrayList<WarKind> kinds = new ArrayList<>();

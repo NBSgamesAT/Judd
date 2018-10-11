@@ -20,10 +20,6 @@ import java.util.Arrays;
 
 public class ListenerDiscord {
 
-    public ListenerDiscord(ConnectionHandler sqlConnection){
-        this.sqlConnection = sqlConnection;
-    }
-
     ConnectionHandler sqlConnection;
     private static boolean isReady = false;
 
@@ -572,9 +568,14 @@ public class ListenerDiscord {
             */
             String command = e.getMessage().getContent();
             if(command != null && command.startsWith(";")){
-                Object returnedObject = MainCommandRegistry.runCommand(command.substring(1), SenderLocation.DISCORD);
+                Object returnedObject = MainCommandRegistry.runCommand(command.substring(1), SenderLocation.DISCORD, e);
                 if(returnedObject instanceof String){
                     e.getChannel().sendMessage((String) returnedObject);
+                }
+                else if(returnedObject instanceof Boolean){
+                    if(!(Boolean) returnedObject){
+                        e.getChannel().sendMessage("Command not found");
+                    }
                 }
                 else if (returnedObject == null && e.getChannel().isPrivate()){
                     e.getChannel().sendMessage("Command not found.");

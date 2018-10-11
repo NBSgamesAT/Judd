@@ -2,6 +2,7 @@ package at.nbsgames.telegramsplatoon2maprotation.telegram.objects;
 
 import at.nbsgames.telegramsplatoon2maprotation.telegram.TSupportedMethods;
 import at.nbsgames.telegramsplatoon2maprotation.telegram.enums.TChatType;
+import at.nbsgames.telegramsplatoon2maprotation.telegram.enums.TextParseMode;
 import at.nbsgames.telegramsplatoon2maprotation.telegram.replykeyboard.TReplyKeyboardButton;
 import at.nbsgames.telegramsplatoon2maprotation.telegram.replykeyboard.TReplyKeyboardLine;
 import at.nbsgames.telegramsplatoon2maprotation.telegram.replykeyboard.TReplyKeyboardMarkup;
@@ -133,6 +134,17 @@ public class TChat {
         PostRequest.doPostRequestNoReply(TSupportedMethods.SEND_MESSAGE.getRestPath(this.ownBot.getBottoken()), values);
     }
 
+    public void sendMessageText(String message, long replyToMessage, TextParseMode enableMarkdownOrHtml){
+        Map<String, String> values = new HashMap<>();
+        values.put("chat_id", String.valueOf(this.id));
+        values.put("text", message);
+        values.put("parse_mode", enableMarkdownOrHtml.getText());
+        if(replyToMessage != -1){
+            values.put("reply_to_message_id", String.valueOf(replyToMessage));
+        }
+        PostRequest.doPostRequestNoReply(TSupportedMethods.SEND_MESSAGE.getRestPath(this.ownBot.getBottoken()), values);
+    }
+
     public void sendMessageImage(String message, long replyToMessage, File file){
         Map<String, String> values = new HashMap<>();
         values.put("chat_id", String.valueOf(this.id));
@@ -143,16 +155,12 @@ public class TChat {
         PostRequest.doPostRequestNoReply(TSupportedMethods.SEND_PHOTO.getRestPath(this.ownBot.getBottoken()), values);
     }
 
-    public void sendMessageImage(String message, long replyToMessage, String fileIdOrUrl, boolean enableMarkdownOrHtml){
+    public void sendMessageImage(String message, long replyToMessage, String fileIdOrUrl, TextParseMode enableMarkdownOrHtml){
         Map<String, String> values = new HashMap<>();
         values.put("chat_id", String.valueOf(this.id));
         values.put("photo", fileIdOrUrl);
-        if(enableMarkdownOrHtml){
-            if(message != null) values.put("parse_mode", message);
-        }
-        else{
-            if(message != null) values.put("caption", message);
-        }
+        values.put("caption", message);
+        if(enableMarkdownOrHtml != null) values.put("parse_mode", enableMarkdownOrHtml.getText());
 
         if(replyToMessage != -1){
             values.put("reply_to_message_id", String.valueOf(replyToMessage));
@@ -214,7 +222,7 @@ public class TChat {
         this.sendMessageRemoveReplyKeyboard(message, selective, -1);
     }
 
-    public void sendMessageImage(String message, String fileIdOrUrl, boolean enableMarkdownOrHtml){
-       this. sendMessageImage(message, -1, fileIdOrUrl, enableMarkdownOrHtml);
+    public void sendMessageImage(String message, String fileIdOrUrl, TextParseMode enableMarkdownOrHtml) {
+        this.sendMessageImage(message, -1, fileIdOrUrl, enableMarkdownOrHtml);
     }
 }

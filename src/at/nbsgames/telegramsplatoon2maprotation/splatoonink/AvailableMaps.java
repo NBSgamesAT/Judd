@@ -1,15 +1,14 @@
 package at.nbsgames.telegramsplatoon2maprotation.splatoonink;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class AvailableMaps {
 
     private boolean allModes;
-    private ArrayList<String> maps_SplatZones = null;
-    private ArrayList<String> mapsTowerControl = null;
-    private ArrayList<String> mapsRainmaker = null;
-    private ArrayList<String> mapsClamBlitz = null;
+    private ArrayList<String> maps_SplatZones;
+    private ArrayList<String> mapsTowerControl;
+    private ArrayList<String> mapsRainmaker;
+    private ArrayList<String> mapsClamBlitz;
 
     private TreeMap<Integer, List<WarKind>> kinds = new TreeMap<>();
 
@@ -79,7 +78,7 @@ public class AvailableMaps {
 
 
 
-    public Battle[] createScrimWithSet(BestOfFormat format){
+    public Battle[] createScrimWithSet(int battles){
         this.exclusiveSplatZones = getSplatZonesExclusive();
         this.exclusiveTowerControl = getTowerControlExclusive();
         this.exclusiveRainmaker = getRainmakerExclusive();
@@ -93,10 +92,10 @@ public class AvailableMaps {
         WarKind[] order = this.getWarkinds();
         WarKind[] playingOrder = this.getPlayingOrder();
 
-        int battlesSplatZones = this.getBattleCount(playingOrder, format, WarKind.SPLAT_ZONES);
-        int battlesTowerControl = this.getBattleCount(playingOrder, format, WarKind.TOWER_CONTROL);
-        int battlesRainmaker = this.getBattleCount(playingOrder, format, WarKind.RAINMAKER);
-        int battlesClamBlitz = this.getBattleCount(playingOrder, format, WarKind.CLAM_BLITZ);
+        int battlesSplatZones = this.getBattleCount(playingOrder, battles, WarKind.SPLAT_ZONES);
+        int battlesTowerControl = this.getBattleCount(playingOrder, battles, WarKind.TOWER_CONTROL);
+        int battlesRainmaker = this.getBattleCount(playingOrder, battles, WarKind.RAINMAKER);
+        int battlesClamBlitz = this.getBattleCount(playingOrder, battles, WarKind.CLAM_BLITZ);
 
         ArrayList<String> splatZones = null;
         ArrayList<String> towerControl = null;
@@ -116,29 +115,6 @@ public class AvailableMaps {
             else if(kind == WarKind.CLAM_BLITZ){
                 clamBlitz = getRandomMaps(battlesClamBlitz, WarKind.CLAM_BLITZ);
             }
-        }
-
-        int battles;
-        if(format == BestOfFormat.BEST_OF_3){
-            battles = 3;
-        }
-        else if(format == BestOfFormat.BEST_OF_5){
-            battles = 5;
-        }
-        else if(format == BestOfFormat.BEST_OF_7){
-            battles = 7;
-        }
-        else if(format == BestOfFormat.BEST_OF_9){
-            battles = 9;
-        }
-        else if(format == BestOfFormat.BEST_OF_11){
-            battles = 11;
-        }
-        else{
-            battles = 0;
-        }
-        if(battles == 0){
-            return null;
         }
 
         Battle[] battleArray = new Battle[battles];
@@ -208,48 +184,19 @@ public class AvailableMaps {
         this.mapsClamBlitz.remove(map);
     }
 
-    private int getBattleCount(WarKind[] playingOrder, BestOfFormat format, WarKind mode){
-        if(format == BestOfFormat.BEST_OF_3){
-            if(playingOrder[3] == mode){
-                return 0;
-            }
-            else{
-                return 1;
-            }
+    private int getBattleCount(WarKind[] playingOrder, int battles, WarKind mode){
+        int returner = battles / 4;
+        int carriage = battles % 4;
+        if(playingOrder[0] == mode && carriage >= 1){
+            ++returner;
         }
-        else if(format == BestOfFormat.BEST_OF_5){
-            if(playingOrder[0] == mode){
-                return 2;
-            }
-            else{
-                return 1;
-            }
+        else if(playingOrder[1] == mode && carriage >= 2){
+            ++returner;
         }
-        else if(format == BestOfFormat.BEST_OF_7){
-            if(playingOrder[3] == mode){
-                return 1;
-            }
-            else {
-                return 2;
-            }
+        else if(playingOrder[2] == mode && carriage >= 3){
+            ++returner;
         }
-        else if(format == BestOfFormat.BEST_OF_9){
-            if(playingOrder[0] == mode){
-                return 3;
-            }
-            else{
-                return 2;
-            }
-        }
-        else if(format == BestOfFormat.BEST_OF_11){
-            if(playingOrder[3] == mode){
-                return 2;
-            }
-            else{
-                return 3;
-            }
-        }
-        return 0;
+        return returner;
     }
 
     private void addToList(int exclusives, WarKind kind){

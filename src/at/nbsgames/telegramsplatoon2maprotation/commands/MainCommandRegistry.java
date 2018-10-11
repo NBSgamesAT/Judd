@@ -6,12 +6,11 @@ public class MainCommandRegistry {
 
     private static HashMap<String, Command> subCommands = new HashMap<>();
 
-    public static Object runCommand(String command, SenderLocation commandReceiver){
-        System.out.println(command);
+    public static Object runCommand(String command, SenderLocation commandReceiver, Object... additionalObjects){
         String commandHandle[] = command.split(" ", 2);
         if(subCommands.containsKey(commandHandle[0])){
             if(subCommands.get(commandHandle[0]).isRestrictedTo() == null || subCommands.get(commandHandle[0]).isRestrictedTo() == commandReceiver)
-                return subCommands.get(commandHandle[0]).preHandle(commandHandle.length > 1 ? commandHandle[1] : "", commandReceiver);
+                return subCommands.get(commandHandle[0]).preHandle(commandHandle.length > 1 ? commandHandle[1] : "", commandReceiver, additionalObjects);
             else
                 return null;
 

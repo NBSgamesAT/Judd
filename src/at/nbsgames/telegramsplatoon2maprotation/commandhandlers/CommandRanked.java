@@ -8,7 +8,7 @@ import at.nbsgames.telegramsplatoon2maprotation.splatoonink.WebsiteChecker;
 import at.nbsgames.telegramsplatoon2maprotation.telegram.objects.TMessage;
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent;
 
-public class CommandTurf extends Command {
+public class CommandRanked extends Command {
 
     @Override
     public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
@@ -18,7 +18,7 @@ public class CommandTurf extends Command {
             int num;
             if(command == null){
                 num = 0;
-                message = "Getting information about the current turf rotation";
+                message = "Getting information about the current ranked rotation";
             }
             else{
                 num = Integer.parseInt(command);
@@ -32,9 +32,9 @@ public class CommandTurf extends Command {
                 num = 11;
             }
             else if(command != null){
-                message = "Getting information about the giving turf rotation (" + num + ").";
+                message = "Getting information about the giving ranked rotation (" + num + ").";
             }
-            slot = WebsiteChecker.getTurf(num);
+            slot = WebsiteChecker.getRanked(num);
         }
         catch(NumberFormatException e){
             message = "Giving value is not a number; Using 0 (currently active)!";

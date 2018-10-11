@@ -6,10 +6,10 @@ import at.nbsgames.telegramsplatoon2maprotation.commands.SenderLocation;
 public class CommandHelp extends Command {
 
     public CommandHelp(){
-        //This is getting like Bukkit at this point. Im not even sorry. It's like tha
+        //This is getting like Bukkit at this point. Im not even sorry. I wished that it works that way...
         this.addSubCommand("turf", new Command() {
             @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
                 String strg = "Used to check the current or upcoming rotation for turf war.\n" +
                         "If you put a number between 0 and 11 after the command you can also see the upcoming rotation\n\n" +
                         "Example: " + commandReceiver.getPrefix() + "turf 1\n" +
@@ -21,7 +21,7 @@ public class CommandHelp extends Command {
         });
         this.addSubCommand("ranked", new Command() {
             @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
                 String strg = "Used to check the current or upcoming rotation for ranked battle.\n" +
                         "If you put a number between 0 and 11 after the command you can also see the upcoming rotation\n\n" +
                         "Example: " + commandReceiver.getPrefix() + "ranked 1\n" +
@@ -32,7 +32,7 @@ public class CommandHelp extends Command {
         });
         this.addSubCommand("league", new Command() {
             @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
                 String strg = "Used to check the current or upcoming rotation for league battle.\n" +
                         "If you put a number between 0 and 11 after the command you can also see the upcoming rotation\n\n" +
                         "Example: " + commandReceiver.getPrefix() + "league 1\n" +
@@ -43,7 +43,7 @@ public class CommandHelp extends Command {
         });
         this.addSubCommand("search", new Command() {
             @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
                 String strg = "Used to search for a specified map or mode in the rotation:\n\n" +
                         "Usage:\n" +
                         commandReceiver.getPrefix() + "search mode <Mode Name>\n" +
@@ -55,7 +55,7 @@ public class CommandHelp extends Command {
         });
         this.addSubCommand("scrim", new Command() {
             @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
                 String strg = "Create a scrim set with randomised map and mode combinations.\n\n" +
                         "Usage: " + commandReceiver.getPrefix() + "scrim [best of formatt eg. 7]\n" +
                         "Usage: " + commandReceiver.getPrefix() + "scrim <best of formatt eg. 7> all\n\n" +
@@ -66,7 +66,7 @@ public class CommandHelp extends Command {
         });
         Command command = new Command(SenderLocation.DISCORD) {
             @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
                 return "```\nUsed to save and read scrim results.\n\n" +
                         "Usage:\n" +
                         ";results save <Your score> <Enemy team score> <Enemy team name>\n" +
@@ -74,12 +74,36 @@ public class CommandHelp extends Command {
                         "You can use ;help results save and ;help results get for more information about those commands\n```";
             }
         };
-
         this.addSubCommand("results", command);
+        this.addSubCommand("rank", new Command() {
+            @Override
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObject) {
+                String strg = "Get the maps currently available in Ranked battle\n\n" +
+                        "Usage: " + commandReceiver.getPrefix() + "rank <Game Mode>\n\n" +
+                        "Available game modes are:\n" +
+                        "Splat Zones: splatzones, sz\n" +
+                        "Tower Control: towercontrol, tc\n" +
+                        "Rainmaker: rm\n" +
+                        "Clam Blitz: clam, cb";
+                if(commandReceiver == SenderLocation.DISCORD) strg = "```\n" + strg + "\n```";
+                return strg;
+            }
+        });
+        this.addSubCommand("search", new Command() { //Change that
+            @Override
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObject) {
+                String strg = "Searches for modes or maps in the rotation\n\n" +
+                        "Usage: " + commandReceiver.getPrefix() + "search mode <Game Mode>\n" +
+                        "Usage: " + commandReceiver.getPrefix() + "search map <Map>\n\n" +
+                        "Please use " + commandReceiver.getPrefix() + "maps for a list of available maps and " + commandReceiver.getPrefix() + "help rank for a list of available game modes";
+                if(commandReceiver == SenderLocation.DISCORD) strg = "```\n" + strg + "\n```";
+                return strg;
+            }
+        });
     }
 
     @Override
-    public Object handleComamnd(String command, SenderLocation commandReceiver) {
+    public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
         if(commandReceiver == SenderLocation.TELEGRAM){
             String sendBack = "Here are all command this bot is supporting\n\n" +
                     "/start: Getting the custom keyboard and this help list\n" +
@@ -102,7 +126,7 @@ public class CommandHelp extends Command {
                     ";turf: Get the current or upcoming rotation for turf war.\n" +
                     ";ranked: Get the current or upcoming rotation for ranked battle\n" +
                     ";league: Get the current or upcoming rotation for league battle\n" +
-                    ";salmon: Get the current (or next) shift for (salmon run\n" +
+                    ";salmon: Get the current (or next) shift for (salmon run)\n" +
                     ";rank: Get the maps which are playable in ranked battle for a specified game mode\n" +
                     ";search: Search after a specific mode or map in the rotation\n\n" +
                     ";author: Get information about the author of this bot\n" +

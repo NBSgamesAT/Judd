@@ -1,6 +1,6 @@
 package at.nbsgames.telegramsplatoon2maprotation;
 
-import at.nbsgames.telegramsplatoon2maprotation.commandhandlers.CommandHelp;
+import at.nbsgames.telegramsplatoon2maprotation.commandhandlers.*;
 import at.nbsgames.telegramsplatoon2maprotation.commands.MainCommandRegistry;
 import at.nbsgames.telegramsplatoon2maprotation.database.ConnectionHandler;
 import at.nbsgames.telegramsplatoon2maprotation.telegram.TReceiver;
@@ -13,40 +13,31 @@ public class Main{
 
     private static TReceiver telegramClient = null;
 
-    private static boolean finalizedBot = false;
+    private static boolean finalizedBot = true;
     private static IDiscordClient client = null;
     private static ConnectionHandler handler = null;
 
     public static void main(String args[]){
-        /*MainCommandRegistry.registerCommand("test", new Command() {
-            @Override
-            public Object handleComamnd(String command, SenderLocation commandReceiver) {
-                if(commandReceiver == SenderLocation.TELEGRAM)
-                    return "This is a test message for the telegram part";
-                else
-                    return "This is a test message for the discord part";
-            }
-        });*/
+
         Main.registerCommands();
 
-
-
-
-        EventDispatcher dispatcher = client.getDispatcher();
         ListenerDiscord listDis;
 
 
         if(finalizedBot){
+            handler = new ConnectionHandler(BotApiTokens.DATABASE_OFFICAL_LINK.getToken(), "judd", BotApiTokens.DATABASE_PASSWD.getToken());
             telegramClient = new TReceiver(BotApiTokens.TELEGRAM_OFFICAL_BOT.getToken(), 1000, new Listener()); // Judd
             client = Main.createDiscordClient(BotApiTokens.DISCORD_OFFICAL_BOT.getToken(), true);
             listDis = new ListenerDiscord();
 
         }
         else{
+            handler = new ConnectionHandler(BotApiTokens.DATABASE_TEST_LINK.getToken(), "judd", BotApiTokens.DATABASE_PASSWD.getToken());
             telegramClient = new TReceiver(BotApiTokens.TELEGRAM_TEST_BOT.getToken(), 1000, new Listener()); // Test bot
             client = Main.createDiscordClient(BotApiTokens.DISCORD_TEST_BOT.getToken(), true);
             listDis = new ListenerDiscord();
         }
+        EventDispatcher dispatcher = client.getDispatcher();
         dispatcher.registerListener(listDis);
     }
     
@@ -74,6 +65,16 @@ public class Main{
 
     static void registerCommands(){
         MainCommandRegistry.registerCommand("help", new CommandHelp());
+        MainCommandRegistry.registerCommand("turf", new CommandTurf());
+        MainCommandRegistry.registerCommand("ranked", new CommandRanked());
+        MainCommandRegistry.registerCommand("league", new CommandLeague());
+        MainCommandRegistry.registerCommand("salmon", new CommandSalmon());
+        MainCommandRegistry.registerCommand("maps", new CommandMaps());
+        MainCommandRegistry.registerCommand("scrim", new CommandScrim());
+        MainCommandRegistry.registerCommand("rank", new CommandRank());
+        MainCommandRegistry.registerCommand("search", new CommandSearch());
+
+        SimpleCommands.registerSimpleCommands();
     }
 
     public static ConnectionHandler getDatabaseHandler(){

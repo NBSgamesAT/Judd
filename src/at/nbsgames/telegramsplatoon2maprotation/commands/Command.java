@@ -15,21 +15,20 @@ public abstract class Command {
         this.restrictedTo = restrictedTo;
     }
 
-    public Object preHandle(String command, SenderLocation commandReceiver, ){
-        System.out.println(command);
+    public Object preHandle(String command, SenderLocation commandReceiver, Object... additionalObject){
         String commandHandle[] = command.split(" ", 2);
         if(subCommands.containsKey(commandHandle[0])){
             if(subCommands.get(commandHandle[0]).isRestrictedTo() == null || subCommands.get(commandHandle[0]).isRestrictedTo() == commandReceiver)
-                return subCommands.get(commandHandle[0]).preHandle(commandHandle.length > 1 ? commandHandle[1] : "", commandReceiver);
+                return subCommands.get(commandHandle[0]).preHandle(commandHandle.length > 1 ? commandHandle[1] : "", commandReceiver, additionalObject);
             else
-                return this.handleComamnd(!command.trim().equals("") ? command : null, commandReceiver);
+                return this.handleComamnd(!command.trim().equals("") ? command : null, commandReceiver, additionalObject);
         }
         else{
-            return this.handleComamnd(!command.trim().equals("") ? command : null, commandReceiver);
+            return this.handleComamnd(!command.trim().equals("") ? command : null, commandReceiver, additionalObject);
         }
     }
 
-    public abstract Object handleComamnd(String command, SenderLocation commandReceiver);
+    public abstract Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObject);
 
     public void addSubCommand(String commandName, Command command){
         this.subCommands.put(commandName, command);

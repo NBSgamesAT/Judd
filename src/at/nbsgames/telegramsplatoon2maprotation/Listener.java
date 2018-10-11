@@ -207,17 +207,21 @@ public class Listener implements TEventHook{
             String cutThings = commandHandle[0].replace("@" + message.getBotUsername(), "");
             commandHandle[0] = cutThings.substring(1).toLowerCase();
             String command = commandHandle.length > 1 ? commandHandle[0] + " " + commandHandle[1] : commandHandle[0];
-            System.out.println(command);
-            Object result = MainCommandRegistry.runCommand(command, SenderLocation.TELEGRAM);
+            Object result = MainCommandRegistry.runCommand(command, SenderLocation.TELEGRAM, message);
             if(result == null){
-                message.getChat().sendMessageText("Command not found");
+                if(message.getChat().getChatType() == TChatType.PRIVATE) message.getChat().sendMessageText("Command not found");
             }
             else if(result instanceof String){
                 message.getChat().sendMessageText((String) result);
             }
+            else if(result instanceof Boolean){
+                if(!(Boolean) result){
+                    if(message.getChat().getChatType() == TChatType.PRIVATE) message.getChat().sendMessageText("Command not found");
+                }
+            }
         }
         else{
-            message.getChat().sendMessageText("Cannot handle message. Must begin with a / and must be completely text");
+            if(message.getChat().getChatType() == TChatType.PRIVATE) message.getChat().sendMessageText("Cannot handle message. Must begin with a / and must be completely text");
         }
     }
 }
