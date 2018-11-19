@@ -17,12 +17,16 @@ public class TReceiver {
     private Timer timer;
     private long updateId = 0;
     private TimerTask task = null;
+    private long lastGottenTime;
 
     private void setTimerTask(){
        this.task = new TimerTask() {
             @Override
             public void run() {
                 try{
+                    if((lastGottenTime + 30) <= (System.currentTimeMillis() / 1000)){
+                        updateId = 0;
+                    }
                     Map<String, Object> updateMaps = new HashMap<>();
                     updateMaps.put("offset", updateId);
                     String answer = GetRequest.doGetRequest(TSupportedMethods.GET_UPDATES.getRestPath(token), updateMaps);
@@ -37,6 +41,9 @@ public class TReceiver {
                             if(array.getJSONObject(count).has("message")){
                                 hook.messageReceived(new TMessage(user, array.getJSONObject(count).getJSONObject("message")));
                             }
+                        }
+                        if(updates != 0){
+                            lastGottenTime = System.currentTimeMillis() / 1000;
                         }
                     }
                     else{
@@ -77,17 +84,15 @@ public class TReceiver {
 
 
 
-    public void stopTimer(){
-        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
-            @Override
-            public void run() {
+    private void stopTimer(){
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 timer.cancel();
                 timer.purge();
                 Map<String, Object> fact = new HashMap<>();
                 fact.put("offset", updateId);
                 GetRequest.doGetRequest(TSupportedMethods.GET_UPDATES.getRestPath(token), fact);
             }
-        }));
+        ));
     }
 
 }

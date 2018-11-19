@@ -161,7 +161,7 @@ public class CommandSearch extends Command {
     static private String createTelegramRotationString(BattleSlotV2 battle){
         return "Mode: " + battle.getWarKind().getFriendlyName() + "\n" +
                 "Maps: " + BattleSlotV2.createTrimmedMapString(battle.getMaps(), ", ") + "\n" +
-                (battle.hasStarted() ? "Starts in: " : "Ends in: ") + battle.getTime().formatTime();
+                (battle.hasStarted() ? "Ends in: " : "Starts in: ") + battle.getTime().formatTime();
     }
 
 }

@@ -6,7 +6,6 @@ import at.nbsgames.telegramsplatoon2maprotation.commands.SenderLocation;
 import at.nbsgames.telegramsplatoon2maprotation.database.SqlResult;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class CommandMaps extends Command {
 
@@ -16,14 +15,15 @@ public class CommandMaps extends Command {
             SqlResult result = Main.getDatabaseHandler().getData("SELECT MapName FROM Maps;");
             ResultSet sets = result.getResultSet();
             boolean isFirst = true;
-            String reply = "";
+            StringBuilder reply = new StringBuilder();
             while(sets.next()){
                 if(isFirst){
-                    reply = sets.getString("MapName");
+                    reply.append(sets.getString("MapName"));
                     isFirst = false;
                 }
                 else{
-                    reply = reply + "\n" + sets.getString("MapName");
+                    reply.append("\n");
+                    reply.append(sets.getString("MapName"));
                 }
             }
             result.closeResources();

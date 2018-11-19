@@ -41,7 +41,7 @@ public class CommandLeague extends Command {
             slot = WebsiteChecker.getTurf(0);
         }
         if(commandReceiver == SenderLocation.TELEGRAM){
-            message = message + "\nMode: " + slot.getRankingKind().getName() + "\n" +
+            message = message + "\nMode: " + slot.getWarKind().getFriendlyName() + "\n" +
                     "Maps:\n" + BattleSlotV2.createTrimmedMapString(slot.getMaps(), "\n") + "\n\n" +
                     (slot.hasStarted() ? "Ends in: " + slot.getTime().formatTime() : "Starts in: " + slot.getTime().formatTime());
             TMessage tMessage = (TMessage) additionalObjects[0];
