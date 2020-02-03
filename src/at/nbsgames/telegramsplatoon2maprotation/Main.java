@@ -13,7 +13,7 @@ public class Main{
 
     private static TReceiver telegramClient = null;
 
-    private static boolean finalizedBot = true;
+    private static boolean finalizedBot = false;
     private static IDiscordClient client = null;
     private static ConnectionHandler handler = null;
 
@@ -69,10 +69,16 @@ public class Main{
         MainCommandRegistry.registerCommand("ranked", new CommandRanked());
         MainCommandRegistry.registerCommand("league", new CommandLeague());
         MainCommandRegistry.registerCommand("salmon", new CommandSalmon());
-        MainCommandRegistry.registerCommand("maps", new CommandMaps());
         MainCommandRegistry.registerCommand("scrim", new CommandScrim());
+        MainCommandRegistry.registerCommand("maps", new CommandMaps());
         MainCommandRegistry.registerCommand("rank", new CommandRank());
         MainCommandRegistry.registerCommand("search", new CommandSearch());
+        MainCommandRegistry.registerCommand("weapon", new CommandWeapon());
+        MainCommandRegistry.registerCommand("weapons", new CommandWeapons());
+        //MainCommandRegistry.registerCommand("subweapon", new CommandSubWeapon());
+        //MainCommandRegistry.registerCommand("subweapons", new CommandSubWeapon());
+        //MainCommandRegistry.registerCommand("specialweapon", new CommandSubWeapon());
+        //MainCommandRegistry.registerCommand("specialweapons", new CommandSubWeapon());
 
         SimpleCommands.registerSimpleCommands();
     }

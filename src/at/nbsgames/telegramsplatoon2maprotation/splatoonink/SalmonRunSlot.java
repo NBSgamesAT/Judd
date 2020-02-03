@@ -30,7 +30,7 @@ public class SalmonRunSlot {
     }
 
     public String getMapImageDownloadLink() {
-        return "https://nbsgames.at" + mapImage;
+        return "https://nbsgames.at/splatoon2" + mapImage;
     }
 
     public String getWeaponA() {

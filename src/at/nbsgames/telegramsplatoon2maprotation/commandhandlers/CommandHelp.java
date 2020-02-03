@@ -64,6 +64,36 @@ public class CommandHelp extends Command {
                 return strg;
             }
         });
+        this.addSubCommand("weapon", new Command() {
+            @Override
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
+                String strg = "Prints out all the information for a give weapon. See " + commandReceiver.getPrefix() + "weapons for a list of all weapons\n\n" +
+                        "Usage: " + commandReceiver.getPrefix() + "weapon <Weapon name>\n\n" +
+                        "It will also print out the information about the weapon's sub and special weapons.";
+                if(commandReceiver == SenderLocation.DISCORD) strg = "```\n" + strg + "\n```";
+                return strg;
+            }
+        });
+        this.addSubCommand("subweapon", new Command() {
+            @Override
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
+                String strg = "Prints out all the information for a give secondary weapon. See " + commandReceiver.getPrefix() + "subweapons for a list of all secondary weapons\n\n" +
+                        "Usage: " + commandReceiver.getPrefix() + "subweapon <Weapon name>\n\n" +
+                        "It will also print out a list of all main weapons which have the given sub weapon";
+                if(commandReceiver == SenderLocation.DISCORD) strg = "```\n" + strg + "\n```";
+                return strg;
+            }
+        });
+        this.addSubCommand("specialweapon", new Command() {
+            @Override
+            public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {
+                String strg = "Prints out all the information for a give special weapon. See " + commandReceiver.getPrefix() + "specialweapons for a list of all special weapons\n\n" +
+                        "Usage: " + commandReceiver.getPrefix() + "specialweapon <Weapon name>\n\n" +
+                        "It will also print out a list of all main weapons which have the given special weapon";
+                if(commandReceiver == SenderLocation.DISCORD) strg = "```\n" + strg + "\n```";
+                return strg;
+            }
+        });
         Command command = new Command(SenderLocation.DISCORD) {
             @Override
             public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObjects) {

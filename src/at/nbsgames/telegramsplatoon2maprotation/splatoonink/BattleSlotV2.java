@@ -1,7 +1,5 @@
 package at.nbsgames.telegramsplatoon2maprotation.splatoonink;
 
-import org.json.JSONArray;
-
 public class BattleSlotV2 {
 
     private WarKind keyRule;
@@ -29,14 +27,14 @@ public class BattleSlotV2 {
     }
 
     public static String createTrimmedMapString(String[] maps, String sorter){
-        String strg = "";
+        StringBuilder builder = new StringBuilder();
         for(int count = 0; count < maps.length; count++){
             if(count != 0) {
-                strg = strg + sorter;
+                builder.append(sorter);
             }
-            strg = strg + maps[count];
+            builder.append(maps[count]);
         }
-        return strg;
+        return builder.toString();
     }
 
     public Time getTime(){

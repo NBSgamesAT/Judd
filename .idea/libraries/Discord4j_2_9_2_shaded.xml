@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Discord4j-2.9.2-shaded">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../_Dependency_/Discord4j-2.9.2-shaded.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../_Dependency_/Discord4j-2.9.2-shaded.jar!/" />
+    </SOURCES>
+  </library>
+</component>
