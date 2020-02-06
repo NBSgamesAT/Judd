@@ -6,129 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="088fe6ca-e01b-43f4-9384-99bf15a4567a" name="Default Changelist" comment="Had TO change some stuff, thanks Git for making things easy!">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Judd.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_austinv11_servicer_Servicer_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_discord4j_common_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_discord4j_core_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_discord4j_gateway_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_discord4j_rest_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_discord4j_voice_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_simple_fsm_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_stores_api_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_discord4j_stores_jdk_3_0_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_43_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_8_14_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20190722.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_2_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Judd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/ListenerDiscord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandNews.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/TEventHook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/enums/TMessageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TAudio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TContact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TLocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TMessageEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TPhotoSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TSticker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TVenue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TVideo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TVideoNote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TVoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/nbsgames/judd/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/DatabaseColumnNames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/DatabaseColumnNames.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/DiscordAdminCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/DiscordAdminCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/ListenerDiscord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandDelete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandHelp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandLeague.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandLeague.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandMaps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandNews.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandRanked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandRanked.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandSalmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandSalmon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandScrim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandScrim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/CommandTurf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/CommandTurf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commandhandlers/SimpleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commandhandlers/SimpleCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commands/MainCommandRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commands/MainCommandRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/commands/SenderLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/commands/SenderLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/database/ConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/database/ConnectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/database/SqlResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/database/SqlResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/AvailableMaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/AvailableMaps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/BattleSlotV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/BattleSlotV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/FoundSlots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/FoundSlots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/GetSalmonRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/GetSalmonRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/RankingKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/RankingKind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/SalmonRunSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/SalmonRunSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/WarKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/WarKind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/splatoonink/WebsiteChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/splatoonink/WebsiteChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/TEventHook.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/TReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/TReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/TSupportedMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/TSupportedMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/enums/TChatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/enums/TChatType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/enums/TMessageType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/enums/TextParseMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/enums/TextParseMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TAudio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TChatPhoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TChatPhoto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TContact.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TLocation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TMessageEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TPhotoSize.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TSticker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/objects/TUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TVenue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TVideo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TVideoNote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/objects/TVoice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/replykeyboard/TReplyKeyboardButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/replykeyboard/TReplyKeyboardButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/replykeyboard/TReplyKeyboardLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/replykeyboard/TReplyKeyboardLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/replykeyboard/TReplyKeyboardMarkup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/replykeyboard/TReplyKeyboardMarkup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/restapi/GetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/restapi/GetRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/restapi/JsonRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/restapi/JsonRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/restapi/PostRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/restapi/PostRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/at/nbsgames/telegramsplatoon2maprotation/telegram/utilities/TJsonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/nbsgames/judd/telegram/utilities/TJsonObject.java" afterDir="false" />
-    </list>
+    <list default="true" id="088fe6ca-e01b-43f4-9384-99bf15a4567a" name="Default Changelist" comment="Had TO change some stuff, thanks Git for making things easy!" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -159,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="226">
-              <caret line="45" column="27" selection-start-line="54" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+              <caret line="45" column="27" selection-start-line="55" selection-start-column="10" selection-end-line="56" />
             </state>
           </provider>
         </entry>
@@ -932,7 +810,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
-          <caret line="45" column="27" selection-start-line="54" selection-start-column="10" selection-end-line="55" selection-end-column="10" />
+          <caret line="45" column="27" selection-start-line="55" selection-start-column="10" selection-end-line="56" />
         </state>
       </provider>
     </entry>
