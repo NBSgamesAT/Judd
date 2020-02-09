@@ -3,3 +3,4 @@
 src/main/java/at/nbsgames/judd/BotApiTokens.java
 resources
 target
+.idea
