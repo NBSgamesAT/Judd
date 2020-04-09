@@ -20,7 +20,7 @@ public class WebsiteChecker {
 
     private static String getJsonEncodedList(){
         try {
-            URL url = new URL("https://nbsgames.at/splatoon2/rotation.json");
+            URL url = new URL("https://splatoon2.nbsgames.at/rotation.json");
             HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
