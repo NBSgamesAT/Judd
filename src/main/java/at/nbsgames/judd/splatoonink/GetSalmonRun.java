@@ -16,7 +16,7 @@ public class GetSalmonRun {
 
     private static String getJsonEncodedList(){
         try {
-            URL url = new URL("https://nbsgames.at/splatoon2/salmonrun.json");
+            URL url = new URL("https://splatoon2.nbsgames.at/salmonrun.json");
             HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(con.getInputStream()));

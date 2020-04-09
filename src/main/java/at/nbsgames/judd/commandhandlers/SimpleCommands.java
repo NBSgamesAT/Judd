@@ -15,9 +15,9 @@ public class SimpleCommands {
             @Override
             public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObject) {
                 String strg = "Versions:\n" +
-                        "  Bot: 4.0 11th October, 2018\n" +
+                        "  Bot: 5.0.0 8th April 2020\n" +
                         "  Telegram Library: 3.0unfinishedV3.0.1 11th October, 2018\n" +
-                        "  Splatoon Library: 2.1.3 11th October, 2018}\n" +
+                        "  Splatoon Library: 2.1.4 8th April, 2020\n" +
                         "  Discord Lib used: Discord4J\n";
                 return commandReceiver == SenderLocation.TELEGRAM ? strg : "```\n" + strg + "\n```";
             }
@@ -27,7 +27,7 @@ public class SimpleCommands {
             public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObject) {
                 String strg = "Information about my author:\n" +
                         "  Name: Nicolas Bachschwell\n" +
-                        "  Website: NBSgames.at\n" +
+                        "  Website: https://nbsgames.at\n" +
                         "  DiscordId: NBSgamesAT#3496\n" +
                         "  Telegram Username: NBSgamesAT\n";
                 return commandReceiver == SenderLocation.TELEGRAM ? strg : "```\n" + strg + "\n```";
@@ -36,15 +36,11 @@ public class SimpleCommands {
         MainCommandRegistry.registerCommand("botnews", new Command() {
             @Override
             public Object handleComamnd(String command, SenderLocation commandReceiver, Object... additionalObject) {
-                String strg = "Version: 4.0.1\n" +
-                        "  = Telegram and Discord command handlers been replaced with a entirely new one\n" +
-                        "  - Results, register and name command has been remove temporarily\n" +
-                        "  = Changed scrim command: No longer limited to 3, 5, 7, 9 and 11. Now allowing everything up to 13 even 1 or 6.\n" +
-                        "  + Added /scrim, /search, and /maps to the telegram bot.\n" +
-                        "  + Added code to Github\n" +
-                        "  = ;maplist renamed to ;maps\n" +
-                        "  = ;news renamed to ;botnews\n" +
-                        "  = " + commandReceiver.getPrefix() + "salmonrun renamed to " + commandReceiver.getPrefix() + "salmon\n";
+                String strg = "Version: 5.0.0\n" +
+                        "  - Discord4J Library Updated: The old version didn't really work anymore." +
+                        "  - Now using maven to build the the bot" +
+                        "  - Updated " + commandReceiver.getPrefix() + "help command to match again." +
+                        "  - Updated the url for images and data in to match the new url for my server.";
                 return commandReceiver == SenderLocation.TELEGRAM ? strg : "```\n" + strg + "\n```";
             }
         });

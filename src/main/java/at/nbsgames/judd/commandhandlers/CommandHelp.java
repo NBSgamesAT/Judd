@@ -113,11 +113,12 @@ public class CommandHelp extends Command {
                     "/ranked: Get the current or upcoming rotation for ranked battle\n" +
                     "/league: Get the current or upcoming rotation for league battle\n" +
                     "/rank: Get the maps which are playable in ranked battle for a specified game mode\n" +
-                    "/search: Search after a specific mode or map in the rotation\n" +
+                    "/scrim: Create a scrim set\n" +
+                    "/search: Search after a specific mode or map in the rotation\n\n" +
                     "/salmon: Get the current (or next) shift for salmon run\n" +
                     "/author: Get information about the author of this bot\n" +
-                    "/version: Get the current versions for all the bots components\n" +
-                    "/scrim: Create a scrim set";
+                    "/botnews: Shows the latest news for the bot.\n" +
+                    "/version: Get the current versions for all the bots components\n";
             return sendBack;
         }
        else if(commandReceiver == SenderLocation.DISCORD && (command == null || command.equals(""))){
@@ -128,11 +129,11 @@ public class CommandHelp extends Command {
                     ";league: Get the current or upcoming rotation for league battle\n" +
                     ";salmon: Get the current (or next) shift for (salmon run)\n" +
                     ";rank: Get the maps which are playable in ranked battle for a specified game mode\n" +
+                    ";scrim: Create a scrim.\n" +
                     ";search: Search after a specific mode or map in the rotation\n\n" +
                     ";author: Get information about the author of this bot\n" +
+                    ";botnews: Shows the latest news for the bot.\n" +
                     ";version: Get the current versions for all the bots components\n" +
-                    ";results: Save scrim results.\n" +
-                    ";scrim: Create a scrim.\n" +
                     "```";
             return sendBack;
         }
